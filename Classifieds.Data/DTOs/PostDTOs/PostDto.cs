@@ -23,6 +23,7 @@ namespace Classifieds.Data.DTOs
         public decimal? CurrentAmount { get; set; }
         public Guid? CurrentBidderId { get; set; }
         public AuctionStatus? AuctionStatus { get; set; }
+        public string Currency { get; set; } = "VND";
 
     }
 }

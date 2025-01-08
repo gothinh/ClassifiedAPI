@@ -36,6 +36,9 @@ namespace Classifieds.Data.Entities
         public DateTime? EndTime { get; set; }
         public decimal? StartAmount { get; set; }
         public decimal? CurrentAmount { get; set; }
+
+        public String Currency { get; set; } = "VND";
+        public bool? IsActive { get; set; } = true;
         public Guid? CurrentBidderId { get; set; }
 
         public AuctionStatus? AuctionStatus { get; set; }

@@ -208,6 +208,10 @@ namespace Classifieds.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Currency")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<decimal?>("CurrentAmount")
                         .HasColumnType("decimal(18,2)");
 
@@ -223,6 +227,9 @@ namespace Classifieds.Data.Migrations
                     b.Property<string>("Images")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("IsActive")
+                        .HasColumnType("bit");
 
                     b.Property<int>("ItemCondition")
                         .HasColumnType("int");

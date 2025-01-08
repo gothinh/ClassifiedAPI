@@ -131,6 +131,7 @@ namespace Classifieds.Services.Services
             post.Description = dto.Description;
             post.ItemCondition = dto.ItemCondition;
             post.CategoryId = dto.CategoryId;
+            post.Currency = dto.Currency; // Add this line
 
             var entity = await _repository.UpdateAsync(post);
             _logger.LogInformation($"Update post: {entity.Id}");

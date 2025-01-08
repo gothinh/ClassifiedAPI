@@ -44,19 +44,19 @@ var app = builder.Build();
 
 var scope = app.Services.CreateScope();
 var serviceProvider = scope.ServiceProvider;
-try
-{
-    var dataContext = serviceProvider.GetRequiredService<DataContext>();
-    dataContext.Database.Migrate();
-    Console.WriteLine("MIGRATIONNNNNNNNNNNN");
-    Console.WriteLine("Seed data");
-    DbInitialize.Initialize(dataContext);
-}
-catch
-{
-    var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
-    logger.LogError("Migration failed");
-}
+//try
+//{
+//    var dataContext = serviceProvider.GetRequiredService<DataContext>();
+//    dataContext.Database.Migrate();
+//    Console.WriteLine("MIGRATIONNNNNNNNNNNN");
+//    Console.WriteLine("Seed data");
+//    DbInitialize.Initialize(dataContext);
+//}
+//catch
+//{
+//    var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
+//    logger.LogError("Migration failed");
+//}
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

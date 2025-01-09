@@ -23,6 +23,6 @@ namespace Classifieds.Data.DTOs
         public DateTime? EndTime { get; set; }
         public decimal? StartAmount { get; set; }
         public string Currency { get; set; } = "VND"; // Add this line
-
+        public string TimeZone { get; set; } = "UTC";
     }
 }

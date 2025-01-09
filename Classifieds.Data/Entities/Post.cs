@@ -40,8 +40,7 @@ namespace Classifieds.Data.Entities
         public String Currency { get; set; } = "VND";
         public bool? IsActive { get; set; } = true;
         public Guid? CurrentBidderId { get; set; }
-
         public AuctionStatus? AuctionStatus { get; set; }
-
+        public string? TimeZone { get; set; } = "UTC";
     }
 }

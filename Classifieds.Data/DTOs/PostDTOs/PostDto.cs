@@ -24,6 +24,6 @@ namespace Classifieds.Data.DTOs
         public Guid? CurrentBidderId { get; set; }
         public AuctionStatus? AuctionStatus { get; set; }
         public string Currency { get; set; } = "VND";
-
+        public string TimeZone { get; set; } = "UTC";
     }
 }

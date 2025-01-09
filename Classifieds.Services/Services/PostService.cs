@@ -88,7 +88,7 @@ namespace Classifieds.Services.Services
                 }
                 post.Price = 0;
                 post.AuctionStatus = AuctionStatus.Opening;
-
+                post.TimeZone =  dto.TimeZone;
             }
 
             var entity = await _repository.AddAsync(post);

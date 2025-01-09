@@ -21,6 +21,7 @@ namespace Classifieds.Data.DTOs
         public decimal? StartAmount { get; set; }
         public AuctionStatus? AuctionStatus { get; set; }
         public string Currency { get; set; } = "VND"; // Add this line
+        public string TimeZone { get; set; } = "UTC";
 
     }
 }

@@ -14,6 +14,7 @@ namespace Classifieds.Services.IServices
         Task<Post> AddAsync(PostAddDto dto);
         Task<Post> UpdateAsync(PostUpdateDto dto);
         Task<int> DeleteAsync(Guid id);
+        Task<Post> AcceptPostAsync(Guid id);
 
         Task OpenAuction(OpenAuctionDto dto, Guid userId);
         Task ReOpenAuction(OpenAuctionDto dto, Guid userId);

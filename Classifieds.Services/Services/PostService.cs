@@ -148,6 +148,17 @@ namespace Classifieds.Services.Services
             return await _repository.DeleteAsync(post);
         }
 
+        public async Task<Post> AcceptPostAsync(Guid id)
+        {
+            var post = await _repository.FindAsync<Post>(s => s.Id == id);
+            if (post == null)
+            {
+                throw new Exception("Invalid Id");
+            }
+            post.IsActive = true;
+            return await _repository.UpdateAsync(post);
+        }
+
         public async Task<List<PostDto>> GetAllAsync()
         {
             var post = await _repository.GetAsync<Post, PostDto>(s => _mapper.Map<PostDto>(s));

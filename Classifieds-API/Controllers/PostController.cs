@@ -61,6 +61,16 @@ namespace Classifieds_API.Controllers
             return Ok();
         }
 
+        [HttpPut("accept-post/{id}")]
+        public async Task<IActionResult> AcceptPost(Guid id)
+        {
+            var post = await _postService.AcceptPostAsync(id);
+            if (post != null){
+                return Ok();
+            }
+            return BadRequest(new { message = "Post is not existed" });
+        }
+
         [HttpDelete("{id}")]
         [Authorize(Role.User, Role.Admin, Role.SuperAdmin)]
         public async Task<IActionResult> Delete(Guid id)
